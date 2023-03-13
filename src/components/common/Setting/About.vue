@@ -9,6 +9,7 @@ interface ConfigState {
   reverseProxy?: string
   apiModel?: string
   socksProxy?: string
+  httpsProxy?: string
 }
 
 const loading = ref(false)
@@ -39,24 +40,25 @@ onMounted(() => {
       </h2>
       <div class="p-2 space-y-2 rounded-md bg-neutral-100 dark:bg-neutral-700">
         <p>
-          此项目开源于
+          此项目仅限于军和朋友间的测试
           <a
             class="text-blue-600 dark:text-blue-500"
-            href="https://github.com/Chanzhaoyu/chatgpt-web"
+            href="https://a.zank.cc"
             target="_blank"
           >
-            Github
+           这是网址
           </a>
-          ，免费且基于 MIT 协议，没有任何形式的付费行为！
+          ，使用这个网站没有任何形式的付费行为，不要被骗！
         </p>
         <p>
-          如果你觉得此项目对你有帮助，请在 Github 帮我点个 Star 或者给予一点赞助，谢谢！
+          如果你觉得此项目对你有帮助，你也可以把帮助延续下去，给到更多人，谢谢！
         </p>
       </div>
       <p>{{ $t("setting.api") }}：{{ config?.apiModel ?? '-' }}</p>
       <p>{{ $t("setting.reverseProxy") }}：{{ config?.reverseProxy ?? '-' }}</p>
       <p>{{ $t("setting.timeout") }}：{{ config?.timeoutMs ?? '-' }}</p>
       <p>{{ $t("setting.socks") }}：{{ config?.socksProxy ?? '-' }}</p>
+      <p>{{ $t("setting.httpsProxy") }}：{{ config?.httpsProxy ?? '-' }}</p>
     </div>
   </NSpin>
 </template>
